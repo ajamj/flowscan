@@ -1,0 +1,56 @@
+{
+  "name": "@flowscan/core",
+  "version": "0.1.0",
+  "description": "Task extraction engine for FlowScan - scans repository files and builds structured task models",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "kanban",
+    "task-management",
+    "code-scanning",
+    "project-management"
+  ],
+  "author": "ajamj",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ajamj/flowscan.git"
+  },
+  "dependencies": {
+    "fast-glob": "3.3.3",
+    "js-yaml": "4.1.0",
+    "remark": "15.0.1",
+    "remark-parse": "11.0.0",
+    "unified": "11.0.5",
+    "object-hash": "3.0.0",
+    "pino": "9.6.0",
+    "commander": "12.1.0",
+    "chokidar": "4.0.3"
+  },
+  "devDependencies": {
+    "typescript": "5.7.3",
+    "vitest": "2.1.9",
+    "@types/node": "22.10.5",
+    "@types/js-yaml": "4.0.9",
+    "@types/object-hash": "3.0.6"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
