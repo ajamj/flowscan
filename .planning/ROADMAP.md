@@ -16,6 +16,8 @@
 
 ### Phase 1: Parser Core
 
+**GitHub Issue:** #1 — https://github.com/ajamj/flowscan/issues/1
+
 **Goal:** Build @flowscan/core — the task extraction engine that scans repository files and builds a structured task model.
 
 **Requirements:** SCAN-01, SCAN-02, SCAN-03, SCAN-04, CONFIG-01, CONFIG-02
@@ -35,6 +37,8 @@
 ---
 
 ### Phase 2: Kanban UI
+
+**GitHub Issue:** #2 — https://github.com/ajamj/flowscan/issues/2
 
 **Goal:** Build @flowscan/web — the React Kanban board component that renders tasks from core, with drag-and-drop that updates source files.
 
@@ -57,6 +61,8 @@
 
 ### Phase 3: Distribution (VS Code + CLI)
 
+**GitHub Issue:** #3 — https://github.com/ajamj/flowscan/issues/3
+
 **Goal:** Package FlowScan as a VS Code extension and standalone CLI with local web server.
 
 **Requirements:** VSCODE-01, VSCODE-02, VSCODE-03, CLI-01, CLI-02, CLI-03
@@ -78,6 +84,8 @@
 ---
 
 ### Phase 4: AI Agent API + Real-Time
+
+**GitHub Issue:** #4 — https://github.com/ajamj/flowscan/issues/4
 
 **Goal:** Expose REST API for AI agent integration + implement file watcher for real-time board updates.
 
