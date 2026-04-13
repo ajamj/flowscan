@@ -1,0 +1,51 @@
+{
+  "name": "flowscan",
+  "displayName": "FlowScan",
+  "description": "Scan repository and visualize tasks as Kanban board",
+  "version": "0.1.0",
+  "publisher": "ajamj",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "flowscan.openBoard",
+        "title": "FlowScan: Open Board"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "flowscan",
+          "title": "FlowScan",
+          "icon": "$(notebook)"
+        }
+      ]
+    },
+    "views": {
+      "flowscan": [
+        {
+          "type": "webview",
+          "id": "flowscan.board",
+          "name": "Kanban Board"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@flowscan/core": "file:../core"
+  },
+  "devDependencies": {
+    "@types/vscode": "1.95.0",
+    "typescript": "5.7.3"
+  }
+}
