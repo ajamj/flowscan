@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitest/config';
+import { resolve } from 'node:path';
 
 export default defineConfig({
   test: {
@@ -15,5 +16,8 @@ export default defineConfig({
         statements: 80,
       },
     },
+  },
+  resolve: {
+    extensions: ['.ts', '.js'],
   },
 });
