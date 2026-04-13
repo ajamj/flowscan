@@ -1,14 +1,14 @@
 # STATE.md — FlowScan Project Memory
 
 **Last Updated:** 2026-04-13
-**Project Phase:** Phase 1 Planning Complete — Ready for Execution
+**Project Phase:** Phase 1 Complete ✅
 
 ## Project Reference
 
 See: .planning/PROJECT.md (updated 2026-04-13)
 
 **Core value:** "No more context switching. Repo kamu sendiri yang jadi single source of truth untuk project tracking."
-**Current focus:** Phase 1 — Parser Core
+**Current focus:** Phase 2 — Kanban UI
 
 ## Current State
 
@@ -19,14 +19,14 @@ See: .planning/PROJECT.md (updated 2026-04-13)
 - [x] Research completed (STACK, FEATURES, ARCHITECTURE, PITFALLS, SUMMARY)
 - [x] REQUIREMENTS.md defined (25 v1 requirements)
 - [x] ROADMAP.md created (4 phases with GitHub issue links)
-- [x] Phase 1: Parser Core — **PLANNED** (CONTEXT.md, RESEARCH.md, PLAN.md)
-  - 12 execution plans in 6 waves
-  - Wave 0: Project scaffold
-  - Wave 1: Foundation types + config + patterns (parallel)
-  - Wave 2: Core parsers (parallel)
-  - Wave 3: Scan orchestration
-  - Wave 4: Persistence + incremental
-  - Wave 5: CLI entry point
+- [x] Phase 1: Parser Core — **COMPLETE** ✅
+  - 42 tests passing, lint clean, type-check clean
+  - Regex-based parsing for TS/JS/Python/Go/Rust
+  - Markdown checkbox parsing (remark/mdast)
+  - Config system with YAML support
+  - StatusMapper with config-driven mapping
+  - FilePersister with atomic writes
+  - CLI (flowscan scan, flowscan init)
 - [ ] Phase 2: Kanban UI — **NOT STARTED**
 - [ ] Phase 3: Distribution — **NOT STARTED**
 - [ ] Phase 4: AI Agent API — **NOT STARTED**
@@ -35,7 +35,7 @@ See: .planning/PROJECT.md (updated 2026-04-13)
 
 | Phase | Status | Plans | Progress |
 |-------|--------|-------|----------|
-| 1: Parser Core | ◆ | 0/12 | 0% |
+| 1: Parser Core | ✓ | 12/12 | 100% |
 | 2: Kanban UI | ○ | 0/0 | 0% |
 | 3: Distribution | ○ | 0/0 | 0% |
 | 4: AI Agent API | ○ | 0/0 | 0% |
@@ -44,29 +44,29 @@ See: .planning/PROJECT.md (updated 2026-04-13)
 
 - Open-source project at https://github.com/ajamj/flowscan
 - GitHub username: ajamj
-- License: TBD (recommend MIT or Apache 2.0)
+- License: TBD (recommend MIT)
 - Auto mode enabled (YOLO workflow)
-- Design review completed (PM, Architect, Security — REVISE recommendations incorporated)
-- Phase 1 plan: 12 execution plans, 6 waves, TDD methodology
-- Next action: Execute Wave 0 (Project Scaffold) then Wave 1-5
+- Phase 1 complete — core parsing engine fully functional
+- Next: Phase 2 (Kanban UI), Phase 3 (Distribution), Phase 4 (API + Real-Time)
 
 ## GitHub Issues
 
-| Issue | Phase | Link |
-|-------|-------|------|
-| #1 | Phase 1: Parser Core | https://github.com/ajamj/flowscan/issues/1 |
-| #2 | Phase 2: Kanban UI | https://github.com/ajamj/flowscan/issues/2 |
-| #3 | Phase 3: Distribution | https://github.com/ajamj/flowscan/issues/3 |
-| #4 | Phase 4: AI Agent API | https://github.com/ajamj/flowscan/issues/4 |
+| Issue | Phase | Status |
+|-------|-------|--------|
+| #1 | Phase 1: Parser Core | ✅ Complete |
+| #2 | Phase 2: Kanban UI | Open |
+| #3 | Phase 3: Distribution | Open |
+| #4 | Phase 4: AI Agent API | Open |
 
-## Key Decisions Pending
+## Key Decisions Made
 
-| Decision | Blocked On | Notes |
-|----------|-----------|-------|
-| Monorepo vs single package | Phase 1 start | Recommendation: start single, split later |
-| License selection | Project setup | MIT recommended for open source |
-| tree-sitter vs regex-only for MVP | Phase 1 scope | Decision: regex for MVP, tree-sitter Phase 2+ |
+| Decision | Outcome |
+|----------|---------|
+| ESM module system | Using .js extension in imports for TypeScript |
+| SHA-256 for task IDs | Deterministic content-based hashing |
+| Atomic file writes | Write to temp file, rename for safety |
+| CLI bin name | `flowscan` |
 
 ---
 *State initialized: 2026-04-13*
-*Last updated: 2026-04-13 after Phase 1 planning*
+*Last updated: 2026-04-13 after Phase 1 completion*
