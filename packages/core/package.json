@@ -36,7 +36,7 @@
     "url": "https://github.com/ajamj/flowscan.git"
   },
   "dependencies": {
-    "chokidar": "4.0.3",
+    "chokidar": "^4.0.3",
     "commander": "12.1.0",
     "fast-glob": "3.3.3",
     "js-yaml": "4.1.0",
